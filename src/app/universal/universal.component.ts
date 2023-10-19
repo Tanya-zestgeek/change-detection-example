@@ -7,14 +7,13 @@ import { SharedService } from '../shared.service';
 })
 export class UniversalComponent implements OnInit {
 
-  constructor(private dataService: SharedService , private cd: ChangeDetectorRef) {}
-  ngOnInit(): void {
-    
-  }
+  constructor(private dataService: SharedService, private cd: ChangeDetectorRef) { }
+  
+  ngOnInit(): void {}
 
-  updateSharedData(value:any) {
+  updateSharedData(value: any) {
     this.dataService.updateData(value);
-    this.dataService.setSharedData(value)
+
   }
 
 }
